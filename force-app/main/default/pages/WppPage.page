@@ -1,0 +1,25 @@
+<apex:page controller="WppController">
+    <apex:form>
+        <apex:pageMessages />
+
+        <apex:pageBlock>
+            <apex:pageBlockSection title="Enviar mensagem via WhatsApp">
+                <apex:inputText value="{!leadId}" label="ID do Lead" />
+                <apex:commandButton value="Enviar" action="{!sendTemplateMessage}" reRender="resultMessage" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+
+        <apex:outputPanel id="resultMessage">
+            <apex:pageBlock rendered="{!hasResult}">
+                <apex:pageBlockSection title="Resultado">
+                    <apex:outputPanel rendered="{!result}">
+                        <p>A mensagem foi enviada com sucesso!</p>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!NOT(result)}">
+                        <p>Ocorreu um erro ao enviar a mensagem.</p>
+                    </apex:outputPanel>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>
