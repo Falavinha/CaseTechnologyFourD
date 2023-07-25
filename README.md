@@ -1,8 +1,8 @@
 # Case de Technology - FourD
 This application is a FourD company test with 3 steps, 
-Step 1 -> Is an API with WhatsApp. 
-Step 2 -> Validates the zip code entered in the lead field.
-Step 3 -> Is rebilling code with error.
+- Step 1 -> Is an API with WhatsApp. 
+- Step 2 -> Validates the zip code entered in the lead field.
+- Step 3 -> Is rebilling code with error.
 
 ## Before Use It, Make Sure Of:
 - [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
